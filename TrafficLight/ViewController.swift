@@ -32,11 +32,13 @@ class ViewController: UIViewController {
 
     @IBAction func startButtonTaped() {
         startButton.setTitle("Next", for: .normal)
+        
         if taps < 3 {
             taps += 1
         } else {
             taps = 1
         }
+        
         if taps == 1 {
             redSignalLabel.alpha = 1
             yellowSignalLabel.alpha = 0.3
@@ -50,8 +52,6 @@ class ViewController: UIViewController {
             yellowSignalLabel.alpha = 0.3
             greenSignalLabel.alpha = 1
         }
-        
     }
-    
 }
 
